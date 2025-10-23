@@ -1,7 +1,6 @@
 import jakarta.xml.bind.*;
 
 import java.io.File;
-import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
@@ -49,19 +48,18 @@ public class Main {
             System.out.print("OPCION: ");
             int opcion = sc.nextInt();
             JAXBContext contexto = JAXBContext.newInstance(Libreria.class);
-            Marshaller m = contexto.createMarshaller();
             switch (opcion) {
                 case 1:
-                    System.out.println(leerTitulos(m, contexto));
+                    System.out.println(leerTitulos(contexto));
                     break;
                 case 2:
                     System.out.println("Por favor, dime un autor");
                     sc.nextLine();
                     String autorABuscar = sc.nextLine();
-                    System.out.println(buscarPorAutor(m, contexto, autorABuscar));
+                    System.out.println(buscarPorAutor( contexto, autorABuscar));
                     break;
                 case 3:
-                    generarLibro(m, contexto);
+                    generarLibro(contexto);
                     break;
                 case 4:
                     System.out.println("Finalizando programa...");
@@ -71,21 +69,21 @@ public class Main {
 
     }
 
-    public static String leerTitulos(Marshaller m, JAXBContext contexto) throws JAXBException {
+    public static String leerTitulos( JAXBContext contexto) throws JAXBException {
         Unmarshaller um = contexto.createUnmarshaller();
         Libreria libreriaGetafe = (Libreria) um.unmarshal(new File("libreria.xml"));
         return libreriaGetafe.toTitulo();
 
     }
 
-    public static String buscarPorAutor(Marshaller m, JAXBContext contexto, String autor) throws JAXBException {
+    public static String buscarPorAutor(JAXBContext contexto, String autor) throws JAXBException {
         Unmarshaller um = contexto.createUnmarshaller();
         Libreria libreriaGetafe = (Libreria) um.unmarshal(new File("libreria.xml"));
         return libreriaGetafe.librosAutor(autor);
 
     }
 
-    public static void generarLibro(Marshaller m, JAXBContext contexto) {
+    public static void generarLibro(JAXBContext contexto) {
 //autor, titulo, editorial, isbn, precio
         System.out.println("Por favor, introduce los datos del libro");
         Scanner sc = new Scanner(System.in);
@@ -122,12 +120,5 @@ public class Main {
         }
 
     }
-    public static void generarXML(String nombreXML) throws IOException {
-        File fichero = new File(nombreXML);
-        boolean creado = fichero.createNewFile();
-        if (creado){
-            System.out.println("Fichero generado correctamente");
-        }
-    }
-//cambio realiado
+
 }
