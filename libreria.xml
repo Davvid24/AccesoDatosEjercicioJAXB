@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<libreria>
+    <Libros>
+        <Libro>
+            <autor>Cervantes</autor>
+            <titulo>El quijote</titulo>
+            <editorial>El barco de vapor</editorial>
+            <isbn>1234</isbn>
+            <precio>20.3</precio>
+        </Libro>
+        <Libro>
+            <autor>Fernando de Rojas</autor>
+            <titulo>La celestina</titulo>
+            <editorial>Santillana</editorial>
+            <isbn>5678</isbn>
+            <precio>25.37</precio>
+        </Libro>
+        <Libro>
+            <autor>Gabriel García Márquez</autor>
+            <titulo>Cien años de soledad</titulo>
+            <editorial>Editorial Sudamericana</editorial>
+            <isbn>9012</isbn>
+            <precio>18.5</precio>
+        </Libro>
+        <Libro>
+            <autor>Isabel Allende</autor>
+            <titulo>La casa de los espíritus</titulo>
+            <editorial>Plaza &amp; Janés</editorial>
+            <isbn>3456</isbn>
+            <precio>21.75</precio>
+        </Libro>
+        <Libro>
+            <autor>J.R.R. Tolkien</autor>
+            <titulo>El hobbit</titulo>
+            <editorial>Minotauro</editorial>
+            <isbn>7890</isbn>
+            <precio>19.99</precio>
+        </Libro>
+        <Libro>
+            <autor>Cervantes</autor>
+            <titulo>El retablo de las maravillas</titulo>
+            <editorial>Gadir</editorial>
+            <isbn>4553</isbn>
+            <precio>21.0</precio>
+        </Libro>
+        <Libro>
+            <autor>Cervantes</autor>
+            <titulo>Sevilla en el siglo de oro</titulo>
+            <editorial>Aventuras</editorial>
+            <isbn>6843</isbn>
+            <precio>12.23</precio>
+        </Libro>
+    </Libros>
+    <lugar>Getafe</lugar>
+    <nombre>Las Hojas</nombre>
+</libreria>
