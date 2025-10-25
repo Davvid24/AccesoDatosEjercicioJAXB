@@ -50,6 +50,13 @@
             <isbn>6843</isbn>
             <precio>12.23</precio>
         </Libro>
+        <Libro>
+            <autor>Cervantes</autor>
+            <titulo>La gitanilla</titulo>
+            <editorial>Anaya</editorial>
+            <isbn>5423</isbn>
+            <precio>21.23</precio>
+        </Libro>
     </Libros>
     <lugar>Getafe</lugar>
     <nombre>Las Hojas</nombre>
